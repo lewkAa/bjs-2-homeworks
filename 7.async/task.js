@@ -36,7 +36,7 @@ class AlarmClock {
 			this.alarmCollection.forEach(alarm => {
 				if (alarm.time === currentTime && alarm.canCall) {
 					alarm.callback();
-					alarm.canCall = false; // Prevent multiple calls
+					alarm.canCall = false;
 				}
 			});
 		}, 1000);
